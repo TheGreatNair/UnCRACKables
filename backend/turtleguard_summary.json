@@ -1,0 +1,16 @@
+{
+  "zone_name": "TurtleGuard Dakshina Kannada Offshore Zone",
+  "days_per_period": 30,
+  "zone_area_km2": 116.85,
+  "current_total_apparent_fishing_hours": 35.72,
+  "current_density_hours_per_km2_per_day": 0.010189,
+  "reference_total_apparent_fishing_hours": 4.77,
+  "reference_density_hours_per_km2_per_day": 0.001359,
+  "alert_multiplier": 1.5,
+  "threshold_density_hours_per_km2_per_day": 0.002039,
+  "activity_ratio": 7.5,
+  "risk_status": "high",
+  "message": "ALERT: High fishing activity near the turtle zone. Notify coastal patrol.",
+  "source": "Global Fishing Watch",
+  "note": "AIS-derived apparent fishing effort; small vessels without AIS may be missing."
+}
