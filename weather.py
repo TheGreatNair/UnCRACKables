@@ -1,39 +1,27 @@
-import urllib.request
-import json
+import requests
 
-LATITUDE = 13.0827
-LONGITUDE = 74.7797
+def get_turtle_nesting_weather(latitude: float, longitude: float):
+    """
+    Fetches temperature, humidity, and wind speed from Open-Meteo API.
+    Does not require an API Key.
+    """
+    url = "https://api.open-meteo.com/v1/forecast"
+    params = {
+        "latitude": latitude,
+        "longitude": longitude,
+        "current": ["temperature_2m", "relative_humidity_2m", "wind_speed_10m", "direct_normal_irradiance"],
+        "hourly": ["temperature_2m", "soil_temperature_0cm"]
+    }
+    
+    try:
+        response = requests.get(url, params=params, timeout=10)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching Open-Meteo data: {e}")
+        return None
 
-url = (
-    f"https://api.open-meteo.com/v1/forecast"
-    f"?latitude={LATITUDE}"
-    f"&longitude={LONGITUDE}"
-    f"&current=temperature_2m,relative_humidity_2m,wind_speed_10m"
-)
-
-try:
-    # Fetch data using Python's built-in urllib
-    with urllib.request.urlopen(url) as response:
-        raw_data = response.read().decode('utf-8')
-        data = json.loads(raw_data)
-
-    current = data["current"]
-    units = data["current_units"]
-
-    temp = current["temperature_2m"]
-    temp_unit = units["temperature_2m"]
-    humidity = current["relative_humidity_2m"]
-    wind = current["wind_speed_10m"]
-    wind_unit = units["wind_speed_10m"]
-
-    print("=" * 30)
-    print("      LIVE WEATHER REPORT     ")
-    print("=" * 30)
-    print(f"Location    : {LATITUDE}, {LONGITUDE}")
-    print(f"Temperature : {temp} {temp_unit}")
-    print(f"Humidity    : {humidity}%")
-    print(f"Wind Speed  : {wind} {wind_unit}")
-    print("=" * 30)
-
-except Exception as error:
-    print(f"Error fetching data: {error}")
+# Test call for Olive Ridley nesting beach coordinates (e.g., Rushikulya, Odisha: 19.3667, 85.0833)
+if __name__ == "__main__":
+    weather_data = get_turtle_nesting_weather(19.3667, 85.0833)
+    print("Open-Meteo Data:", weather_data)
