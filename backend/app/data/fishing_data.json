@@ -1,0 +1,61 @@
+{
+  "total": 1,
+  "limit": null,
+  "offset": null,
+  "nextOffset": null,
+  "metadata": {},
+  "entries": [
+    {
+      "public-global-fishing-effort:v5.0": [
+        {
+          "date": "2026-10-17",
+          "flag": "IND",
+          "hours": 0.7486111111111111,
+          "vesselIDs": 1
+        },
+        {
+          "date": "2026-10-11",
+          "flag": "IND",
+          "hours": 0.5386111111111112,
+          "vesselIDs": 2
+        },
+        {
+          "date": "2026-10-13",
+          "flag": "IND",
+          "hours": 0.6922222222222223,
+          "vesselIDs": 1
+        },
+        {
+          "date": "2026-10-16",
+          "flag": "IND",
+          "hours": 9.672777777777778,
+          "vesselIDs": 1
+        },
+        {
+          "date": "2026-10-19",
+          "flag": "IND",
+          "hours": 3.263333333333333,
+          "vesselIDs": 2
+        },
+        {
+          "date": "2026-10-14",
+          "flag": "IND",
+          "hours": 2.4263888888888885,
+          "vesselIDs": 1
+        },
+        {
+          "date": "2026-10-12",
+          "flag": "IND",
+          "hours": 4.722777777777778,
+          "vesselIDs": 1
+        },
+        {
+          "date": "2026-10-15",
+          "flag": "IND",
+          "hours": 13.651111111111113,
+          "vesselIDs": 3
+        }
+      ]
+    }
+  ]
+}

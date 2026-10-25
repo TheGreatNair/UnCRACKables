@@ -1,0 +1,31 @@
+{
+  "total": 1,
+  "limit": null,
+  "offset": null,
+  "nextOffset": null,
+  "metadata": {},
+  "entries": [
+    {
+      "public-global-fishing-effort:v5.0": [
+        {
+          "date": "2026-08-30",
+          "flag": "IND",
+          "hours": 1.8347222222222221,
+          "vesselIDs": 1
+        },
+        {
+          "date": "2026-08-29",
+          "flag": "IND",
+          "hours": 2.5122222222222215,
+          "vesselIDs": 1
+        },
+        {
+          "date": "2026-08-28",
+          "flag": "IND",
+          "hours": 0.4183333333333333,
+          "vesselIDs": 1
+        }
+      ]
+    }
+  ]
+}
