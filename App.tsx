@@ -18,7 +18,7 @@ import MapView, { Marker, type Region } from 'react-native-maps';
 import { syncPendingReports } from './utils/reportSync';
 import { fetchTurtleGuardStatus, type TurtleGuardStatus } from './utils/turtleGuard';
 import { getDemoEggRisk, type EggRiskAssessment } from './utils/eggRisk';
-
+import { fetchLiveWeather, WeatherData } from './utils/weather';
 const GREEN = '#174D3A';
 const CREAM = '#F7F6F0';
 const MUTED = '#66766D';
