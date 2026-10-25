@@ -100,6 +100,19 @@ const translations = {
 type Language = keyof typeof translations;
 
 export default function App() {
+  export default function App() {
+  // === PLACE CODE HERE (Line 31 or right after the function opens) ===
+  const [weather, setWeather] = useState<WeatherData | null>(null);
+
+  useEffect(() => {
+    async function getWeather() {
+      const data = await fetchLiveWeather(19.3667, 85.0833);
+      setWeather(data);
+    }
+    getWeather();
+  }, []);
+
+  // ... all your existing 600+ lines of code continue below this ...
   const [language, setLanguage] = useState<Language>('English');
   const [selectedSector, setSelectedSector] = useState('Panambur');
   const [activeTab, setActiveTab] = useState('home');
